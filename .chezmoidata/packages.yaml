@@ -1,9 +1,0 @@
-packages:
-  darwin:
-    brews:
-    - 'git'
-    - 'mc'
-    casks:
-    - 'google-chrome'
-
-
