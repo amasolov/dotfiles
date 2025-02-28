@@ -1,9 +1,7 @@
 ### Step Zero
 
-Open Applications > Utilites > Terminal
+### Step 1
 
-Install Xcode Command Line Tools xcode-select --install
-
-Click install, agree to license
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply amasolov --verbose
 
 
