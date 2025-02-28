@@ -29,7 +29,7 @@ Darwin)
     flags+=(--quiet)
   fi
 
-  HOMEBREW_CASK_OPTS=--no-quarantine brew bundle "${flags[@]}" \
+  HOMEBREW_CASK_OPTS=--no-quarantine brew bundle --verbose \
     --file ~/.config/packages/Brewfile
   ;;
 
