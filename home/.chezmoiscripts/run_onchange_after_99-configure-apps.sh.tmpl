@@ -49,7 +49,7 @@ Darwin)
     # Set the dock position. Valid values are left, bottom, and right. Left and right dock
     # positions also affect the position of the program switcher if you have multiple
     # screensi
-    defaults write com.apple.dock orientation -string bottom
+    defaults write com.apple.dock orientation -string left
 
     # The dock icon size in pixels.
     defaults write com.apple.dock tilesize -int 36
@@ -59,7 +59,7 @@ Darwin)
     defaults write com.apple.dock largesize -int 101
 
     # Auto hide the dock
-    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide -bool false
     # Speed up the dock auto-hide animation a little.
     defaults write com.apple.dock autohide-time-modifier -float 0.4
     # Slow down the dock auto-hide delay so it doens't interfere with accidental edge
