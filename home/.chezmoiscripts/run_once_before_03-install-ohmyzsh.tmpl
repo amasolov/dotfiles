@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+readonly script_name=run_once_before-02-install-homebrew.sh.tmpl
+readonly lib_bash='{{ joinPath .chezmoi.workingTree "lib/lib.bash" }}'
+# shellcheck source=lib/lib.bash
+source "${lib_bash}"
+setup '03: Install Oh My Zsh'
+
+case "$(uname -s)" in
+Darwin)
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+*) : ;;
+esac

@@ -5,7 +5,7 @@ readonly script_skip=07
 readonly lib_bash='{{ joinPath .chezmoi.workingTree "lib/lib.bash" }}'
 # shellcheck source=lib/lib.bash
 source "${lib_bash}"
-setup '07: Configure Apps'
+setup '99: Configure Apps'
 
 if ! plutil -lint /Library/Preferences/com.apple.TimeMachine.plist >/dev/null 2>/dev/null; then
   cat >&2 <<FDA
@@ -118,7 +118,30 @@ Darwin)
     # Change the screenshot format. Must be one of heic, png, jpg, pdf, psd, gif, tga,
     # tiff, or bmp.
     defaults write com.apple.screencapture type -string heic
+    
+    # alexeym default
+    defaults write com.apple.screensaver askForPassword -int 1
+    defaults write com.apple.screensaver askForPasswordDelay -int 5
+    defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver/ type 0
+    defaults write com.apple.LaunchServices LSQuarantine -bool false
+    defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+    defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
+    systemsetup -settimezone "Australia/Sydney" > /dev/null
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+    defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+    defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+    defaults write -g com.apple.swipescrolldirection -bool NO
+    defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+    
     restart[Dock]=1
     restart[SystemUIServer]=1
   }
