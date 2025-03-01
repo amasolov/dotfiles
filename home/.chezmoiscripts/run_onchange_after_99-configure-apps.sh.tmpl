@@ -54,7 +54,7 @@ Darwin)
     # The dock icon size in pixels.
     defaults write com.apple.dock tilesize -int 58
     # Make the default magnification tiny
-    defaults write com.apple.dock magnification -int 1
+    defaults write com.apple.dock magnification -bool false
     # Make the largest magnification big
     defaults write com.apple.dock largesize -int 128
 
@@ -141,7 +141,7 @@ Darwin)
     defaults write -g com.apple.swipescrolldirection -bool NO
     defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
     defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-    
+
     restart[Dock]=1
     restart[SystemUIServer]=1
   }
