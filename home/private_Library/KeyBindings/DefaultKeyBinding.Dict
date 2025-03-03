@@ -1,0 +1,50 @@
+{
+    "@\UF72B"  = "moveToEndOfDocument:";                         /* Cmd  + End   */
+    "~@\UF703" = "moveToEndOfDocument:";                         /* Cmd + Option + Right Arrow */
+
+    "@$\UF72B" = "moveToEndOfDocumentAndModifySelection:";       /* Shift + Cmd  + End */
+
+    "@\UF729"  = "moveToBeginningOfDocument:";                   /* Cmd  + Home  */
+    "~@\UF702" = "moveToBeginningOfDocument:";                   /* Cmd + Option + Left Arrow */
+
+    "@$\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Cmd  + Home */
+
+    "\UF729"   = "moveToBeginningOfLine:";                       /* Home         */
+    "~\UF702"  = "moveToBeginningOfLine:";                       /* Option + Left Arrow */
+
+    "$\UF729"  = "moveToBeginningOfLineAndModifySelection:";     /* Shift + Home */
+    "$~\UF702" = "moveToBeginningOfLineAndModifySelection:";     /* Shift + Option + Right Arrow */
+
+    "\UF72B"   = "moveToEndOfLine:";                             /* End          */
+    "~\UF703"  = "moveToEndOfLine:";                             /* Option + Right Arrow */
+
+    "$\UF72B"  = "moveToEndOfLineAndModifySelection:";           /* Shift + End  */
+    "$~\UF703" = "moveToEndOfLineAndModifySelection:";           /* Shift + Option + Left Arrow  */
+
+    "\UF72C"   = "pageUp:";                                      /* PageUp       */
+    "\UF72D"   = "pageDown:";                                    /* PageDown     */
+    "$\UF728"  = "cut:";                                         /* Shift + Del  */
+    "$\UF727"  = "paste:";                                       /* Shift + Ins */
+    "@\UF727"  = "copy:";                                        /* Cmd  + Ins  */
+    "$\UF746"  = "paste:";                                       /* Shift + Help */
+    "@\UF746"  = "copy:";                                        /* Cmd  + Help (Ins) */
+
+    "~j"       = "moveBackward:";                                /* Option + j */
+    "~l"       = "moveForward:";                                 /* Option + l */
+    "~i"       = "moveUp:";                                      /* Option + i */
+    "~k"       = "moveDown:";                                    /* Option + k */
+
+    "@~i"      = ("moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:",);                            /* Cmd + Option + j */
+    "@~k"      = ("moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:",);                            /* Cmd + Option + j */
+
+    "@\UF702"  = "moveWordBackward:";                            /* Cmd  + LeftArrow */
+    "@~j"      = "moveWordBackward:";                            /* Cmd + Option + j */
+    "@\U007F"  = "deleteWordBackward:";                          /* Cmd  + Backspace */
+
+    "@\UF703"  = "moveWordForward:";                             /* Cmd  + RightArrow */
+    "@~l"      = "moveWordForward:";                             /* Cmd + Option + l */
+    "@\UF728"  = "deleteWordForward:";                           /* Cmd  + Delete */
+
+    "@$\UF702" = "moveWordBackwardAndModifySelection:";          /* Shift + Cmd  + Leftarrow */
+    "@$\UF703" = "moveWordForwardAndModifySelection:";           /* Shift + Cmd  + Rightarrow */
+}
